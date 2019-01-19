@@ -1,0 +1,43 @@
+
+.graph-wrapper {
+    margin-top: 50px;
+}
+
+svg rect:first-child,
+ul li:first-child {
+  color: royalblue;
+  fill: royalblue;
+}
+
+svg rect:nth-child(2),
+ul li:nth-child(2) {
+  color: rgb(172, 52, 88);
+  fill: rgb(172, 52, 88);
+}
+
+svg rect:nth-child(3),
+ul li:nth-child(3) {
+  color: rgb(45, 170, 87);
+  fill: rgb(45, 170, 87);
+}
+
+svg rect:nth-child(4),
+ul li:nth-child(4) {
+  color: rgb(202, 187, 48);
+  fill: rgb(202, 187, 48);
+}
+
+svg rect:nth-child(5),
+ul li:nth-child(5) {
+  color: rgb(42, 194, 181);
+  fill: rgb(42, 194, 181);
+}
+
+.labe-wrapper {
+    width: 100vw;
+    }
+    
+    .label {
+      float: left;
+      text-align: center;
+    }

@@ -1,0 +1,44 @@
+
+svg rect:first-child,
+.label-wrapper div:first-child {
+  color: royalblue;
+  fill: royalblue;
+}
+
+svg rect:nth-child(2),
+.label-wrapper div:nth-child(2) {
+  color: rgb(172, 52, 88);
+  fill: rgb(172, 52, 88);
+}
+
+svg rect:nth-child(3),
+.label-wrapper div:nth-child(3) {
+  color: rgb(45, 170, 87);
+  fill: rgb(45, 170, 87);
+}
+
+svg rect:nth-child(4),
+.label-wrapper div:nth-child(4) {
+  color: rgb(202, 187, 48);
+  fill: rgb(202, 187, 48);
+}
+
+svg rect:nth-child(5),
+.label-wrapper div:nth-child(5) {
+  color: rgb(42, 194, 181);
+  fill: rgb(42, 194, 181);
+}
+
+.label-wrapper {
+width: 100vw;
+}
+
+.label-wrapper div {
+  float: left;
+  text-align: center;
+}
+
+.label {
+  float: left;
+  text-align: center;
+}
