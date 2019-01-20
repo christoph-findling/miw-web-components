@@ -17,8 +17,11 @@ export class StickComp {
 
   componentDidLoad() {
     console.log('stick comp did load');
-    // this.htmlElement.querySelector('.graph-comp')[0].style.setProperty('--current-value', '3333');
-    // console.log(this.htmlElement);
+    this.data.map((index) => {
+      let className = '.label-' + index;
+      let htmlEl = this.htmlElement.shadowRoot.querySelector(className) as HTMLElement;
+      htmlEl.style.setProperty('width', (100 / this.data.length) + '%');
+    })
   }
 
   render() {
@@ -41,12 +44,13 @@ export class StickComp {
               })}
           </svg>
         </div>
-        <ul>
+        <div class="label-wrapper">
           {
-            this.data.map((item) => {
-              return <li>{item.coin} || {item.percentage}%</li>
+            this.data.map((item, index) => {
+              let className = "label-" + index;
+              return <div class={className}>{item.coin} || {item.percentage}%</div>
             })}
-        </ul>
+        </div>
       </div>
     );
   }

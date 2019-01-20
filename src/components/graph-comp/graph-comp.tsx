@@ -15,7 +15,6 @@ export class GraphComp {
 
   componentDidLoad() {
     console.log('did load');
-    // this.htmlElement.querySelector('.graph-comp')[0].style.setProperty('--current-value', '3333');
     console.log(this.htmlElement);
     this.data.map((item, index) => {
       let className = '.label-' + index;
