@@ -29,3 +29,15 @@
   More info about color theming using Ionic:
   https://beta.ionicframework.com/docs/theming/color-generator
 */
+body{
+  position: relative;
+  text-align: center;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+#rss-xml{
+  padding: 10px;
+  text-align: left;
+  white-space: pre;
+}

@@ -13,16 +13,7 @@ export class StickComp {
 
   @Element() htmlElement: HTMLElement;
 
-  @Prop() data: any;
-
-  componentDidLoad() {
-    console.log('stick comp did load');
-    this.data.map((index) => {
-      let className = '.label-' + index;
-      let htmlEl = this.htmlElement.shadowRoot.querySelector(className) as HTMLElement;
-      htmlEl.style.setProperty('width', (100 / this.data.length) + '%');
-    })
-  }
+  @Prop() data: any = [];
 
   render() {
     {

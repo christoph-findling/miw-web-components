@@ -34,7 +34,7 @@ width: 100vw;
 }
 
 .label-wrapper div {
-  float: left;
+  display: block;
   text-align: center;
 }
 

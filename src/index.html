@@ -27,58 +27,20 @@
 </head>
 
 <body>
-
+  <h1>Medien im Web Übung SVG & RSS Beispiel</h1>
+  <p>Daten werden von der CoinGecko API abgeholt und mithilfe von Web Components als SVG dargestellt. 
+    Für die Daten wird zusätzlich auch ein wohlgeformtes und valides XML für ein RSS Feed generiert (Getestet mit W3C Testing Tool: https://validator.w3.org/feed/check.cgi).
+  </p>
+  <br />
   <graph-comp></graph-comp>
   <stick-comp></stick-comp>
-  <script>
-    var cmp = document.querySelector('graph-comp');
-    cmp.data = [{
-      'coin': 'BTC',
-      'percentage': 35
-    },
-    {
-      'coin': 'ETH',
-      'percentage': 25
-    },
-    {
-      'coin': 'TRX',
-      'percentage': 15
-    },
-    {
-      'coin': 'CVG',
-      'percentage': 15
-    },
-    {
-      'coin': 'LTC',
-      'percentage': 10
-    }
-    ];
 
-    var sticks = document.querySelector('stick-comp');
-    sticks.data = [{
-      'coin': 'BTC',
-      'percentage': 35
-    },
-    {
-      'coin': 'ETH',
-      'percentage': 25
-    },
-    {
-      'coin': 'TRX',
-      'percentage': 15
-    },
-    {
-      'coin': 'CVG',
-      'percentage': 15
-    },
-    {
-      'coin': 'LTC',
-      'percentage': 10
-    }
-    ];
+  <br /><br />
+  <hr />
+  <h2>Genereriertes RSS XML:</h2>
+  <div id="rss-xml">
 
-  </script>
-
+  </div>
 </body>
 
 </html>

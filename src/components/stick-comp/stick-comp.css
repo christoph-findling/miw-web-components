@@ -38,8 +38,8 @@ svg rect:nth-child(5),
     }
 
 .label-wrapper div {
-      float: left;
-      text-align: center;
+  display: block;
+  text-align: center;
 }
     
 .label {

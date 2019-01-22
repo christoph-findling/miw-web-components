@@ -11,18 +11,7 @@ export class GraphComp {
 
   @Element() htmlElement: HTMLElement;
 
-  @Prop() data: any;
-
-  componentDidLoad() {
-    console.log('did load');
-    console.log(this.htmlElement);
-    this.data.map((item, index) => {
-      let className = '.label-' + index;
-      let htmlEl = this.htmlElement.shadowRoot.querySelector(className) as HTMLElement;
-      htmlEl.style.setProperty('width', item.percentage + '%');
-    })
-    console.log(this.htmlElement.shadowRoot.querySelector('.label'));
-  }
+  @Prop() data: any = [];
 
   render() {
 
@@ -32,13 +21,11 @@ export class GraphComp {
           <svg width="100vw" height="100">
             {
               this.data.map((item, index) => {
-                console.log('mapping');
-                let x;
+                let x = 0;
                 if (index != 0) {
                   x = this.helper;
                 }
                 this.helper += item.percentage;
-                console.log('helper: ' + this.helper);
                 return <rect width={item.percentage + '%'} x={x + '%'} height="100" />
               })}
           </svg>
@@ -46,7 +33,6 @@ export class GraphComp {
         <div class="label-wrapper">
           {
             this.data.map((item, index) => {
-              console.log('helper: ' + this.helper);
               let className = "label-" + index;
               return <div class={className}>{item.coin} || {item.percentage}%</div>
             })}
